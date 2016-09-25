@@ -39,7 +39,6 @@
 		<li>列表项目三</li>
 	</ul>
 	<h2>图片</h2>
-	
 	<figure><figcaption>好看的图片</figcaption>
 	<img src="img/pic.png"></figure>
 	<figure><figcaption>好看的图片</figcaption>
@@ -85,30 +84,34 @@
 
 <aside>
 	<h1>这里以后是一个侧栏，这是侧栏的标题</h1>
-	<form>
 	<h2>侧栏注册窗口标题</h2>
-	请输入邮箱地址：<input type="text" name="text1" value="这是一个文本输入框"><br>
-	邮箱地址请按要求格式输入 <br>	
-	请输入密码：<input type="password" name="text2" value="这是一个文本输入框">
-	请重复输入密码：<input type="password" name="text3" value="这是一个文本输入框"><br>
-	密码为6-16位英文数字<br>
-
-	
-	性别：	<input type="radio" name="sex" value="male">男	
+	<form>
+		<label>请输入邮箱地址：</label>
+			<input type="email" name="text1" value="">
+			<p>邮箱地址请按要求格式输入</p> 	
+		<label>请输入密码：</label>
+			<input type="password" name="text2" value="">
+		<label>请重复输入密码：</label>
+			<input type="password" name="text3" value="">
+			<p>密码为6-16位英文数字</p>
+		<label>性别：</label>
+			<input type="radio" name="sex" value="male">男	
 			<input type="radio" name="sex" value="female">女
-	城市： <select name="city">
-			<option value="volvo">北京</option>
-			<option value="saab">Saab</option>
-			<option value="fiat">Fiat</option>
-			<option value="audi">Audi</option>
-		</select>
-	爱好： <input type="checkbox" name="favor" value="sport">运动
-		<input type="checkbox" name="favor" value="art">艺术
-		<input type="checkbox" name="favor" value="sci">科学
-	个人描述：<textarea>这是一个多行文本框，输入您的个人描述</textarea>
-	<input type="submit" name="submit" value="确认提交">
+		<label>城市：</label>
+			<select name="city">
+				<option value="volvo">北京</option>
+				<option value="saab">Saab</option>
+				<option value="fiat">Fiat</option>
+				<option value="audi">Audi</option>
+			</select>
+		<label>爱好：</label>
+			<input type="checkbox" name="favor" value="sport">运动
+			<input type="checkbox" name="favor" value="art">艺术
+			<input type="checkbox" name="favor" value="sci">科学
+		<label>个人描述：</label>
+			<textarea>这是一个多行文本框，输入您的个人描述</textarea>
+		<input type="submit" name="submit" value="确认提交">
 	</form>
-
 </aside>
 <footer>版权所有&copy;</footer>
 </body>
