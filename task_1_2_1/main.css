@@ -14,4 +14,15 @@ table,td,th{border-collapse: collapse;border: 1px solid #cccccc}
 table{width: 98%; font-size: 12px; line-height: 20px}
 th{color: white;background-color: #333333;text-align: left}
 #tfoot{background-color:#cccccc;font-weight: bold;}
-footer{background-color: #333333;text-align: center;color: white;height: 40px;padding-top: 20px;margin: 0}
+
+aside{float:left;width:90%; }
+aside h3{border-left: 5px solid #cccccc;padding: 10px}
+form{font-size: 14px}
+form div{width:100%;margin: 10px;}
+label{display: inline-block;  text-align: right; width: 30%;vertical-align: top}
+form p{margin-left:30%;padding-left: 4px; color:#a6a29f;line-height: 20px; font-size: 12px;margin-top: 5px}
+textarea{width:65%;height: 100px}
+#submit{width: 98%;height:40px ;margin-left: 1%; background: #3355d0; border-radius: 10px;color: white;
+font-weight: bold;}
+
+footer{clear: both; background-color: #333333;text-align: center;color: white;height: 40px;padding-top: 20px;margin: 0}
