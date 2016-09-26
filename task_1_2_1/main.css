@@ -1,11 +1,17 @@
 body{background-color: #dedede;margin: 0;font-family:  "微软雅黑"}
-nav{position:fixed; height: 20px; background-color:#333333;top:0;width: 100%; padding: auto; height: 60px}
+nav{position:fixed; background-color:#333333;top:0;width: 100%; padding: auto; height: 60px}
 #logo{padding: 10px 30px}
-#nav ul{float:right; font-size:12px;padding-top: 15px;padding-right: 20px}
-.inline{display: inline-block;}
+#nav ul{float:right; font-size:12px; padding-top: 15px; padding-right: 20px; }
+.inline{float:left; width: 80px; list-style-position: inside}
 .nav{color: white; text-decoration: none}
+.nav:hover{color:#b2b5ba;}
 section,aside{ margin: 20px;padding:20px; border: 1px solid #e1e1e1;background-color: white; 
 	border:1px solid #cdcdcd; box-shadow: 2px 2px #848484}
 #begin{margin-top: 80px}
 
+figure{border: 1px solid  #cdcdcd;text-align: center;width:540px;line-height: 40px}
+table,td,th{border-collapse: collapse;border: 1px solid #cccccc}
+table{width: 98%; font-size: 12px; line-height: 20px}
+th{color: white;background-color: #333333;text-align: left}
+#tfoot{background-color:#cccccc;font-weight: bold;}
 footer{background-color: #333333;text-align: center;color: white;height: 40px;padding-top: 20px;margin: 0}
