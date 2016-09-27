@@ -1,0 +1,19 @@
+body{margin:0; font-family: "微软雅黑"}
+
+/*firefox 可以用inline-block + -margin 实现顺序布局三栏自缩放，
+  chrome width为100%后的-margin会另起一行（可使用99.99999999%近似）*/
+
+.out{border: 1px solid #999; padding:20px; margin:20px;overflow: hidden;
+ 	background-color: #eee; min-width: 500px }
+
+.r,.l,.c,img{border: 1px solid #ccc;background-color: #fff;}
+
+.m{float:left; width: 100%}
+.l{float:left;margin-left: -100%;width: 198px}
+
+.r{float:left;margin-left: -120px; width: 118px;}
+
+.c{margin-left: 220px; margin-right: 140px;padding:20px;min-width: 100px}
+
+img{display: block; width: 80px;height: 80px; margin:20px; }
+#logo{float: left}
