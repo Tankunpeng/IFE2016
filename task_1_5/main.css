@@ -1,0 +1,35 @@
+body{background-color: #dedede;margin: 0;font-family:  "微软雅黑";font-size: 15px}
+nav{position:fixed; background-color:#333333;top:0;width: 100%; padding: auto; height: 60px}
+#logo{padding: 10px 30px}
+#nav ul{float:right; font-size:12px; padding-top: 15px; padding-right: 20px; }
+.inline{float:left; width: 80px; list-style-position: inside}
+.nav{color: white; text-decoration: none}
+.nav:hover{color:#b2b5ba;}
+section,aside{ margin: 20px;padding:20px; border: 1px solid #e1e1e1;background-color: white; 
+	border:1px solid #cdcdcd; box-shadow: 2px 2px #848484}
+#begin{margin-top: 80px}
+
+h2{font-size: 21px;}
+h3,div span,div time{color: #616a65}
+h3{font-size:15px;}
+div span,div time{font-size: 12px;}
+
+
+figure{border: 1px solid  #cdcdcd;text-align: center;width:540px;line-height: 40px}
+table,td,th{border-collapse: collapse;border: 1px solid #cccccc}
+table{width: 98%; font-size: 12px; line-height: 20px}
+th{color: white;background-color: #333333;text-align: left}
+#tfoot{background-color:#cccccc;font-weight: bold;}
+
+aside{float:left;width:90%; }
+aside h3{border-left: 5px solid #cccccc;padding: 10px;color:black;}
+form{font-size: 14px}
+form div{width:100%;margin: 10px;}
+label{display: inline-block;  text-align: right; width: 30%;vertical-align: top}
+form p{margin-left:30%;padding-left: 4px; color:#a6a29f;line-height: 20px; font-size: 12px;margin-top: 5px}
+textarea{width:65%;height: 100px;font-family: "微软雅黑"}
+#submit{width: 98%;height:40px ;margin-left: 1%; background: #3355d0; border-radius: 10px;color: white;
+font-weight: bold; font-size: 15px}
+
+footer{clear: both; background-color: #333333;text-align: center;color: white;height: 40px;padding-top: 20px;
+	margin: 0;font-size: 12px}
