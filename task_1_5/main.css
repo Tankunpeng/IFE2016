@@ -15,7 +15,7 @@ h3{font-size:15px;}
 div span,div time{font-size: 12px;}
 
 
-figure{border: 1px solid  #cdcdcd;text-align: center;width:540px;line-height: 40px}
+figure{border: 1px solid  #cdcdcd;text-align: center;line-height: 40px}
 table,td,th{border-collapse: collapse;border: 1px solid #cccccc}
 table{width: 98%; font-size: 12px; line-height: 20px}
 th{color: white;background-color: #333333;text-align: left}
@@ -33,3 +33,15 @@ font-weight: bold; font-size: 15px}
 
 footer{clear: both; background-color: #333333;text-align: center;color: white;height: 40px;padding-top: 20px;
 	margin: 0;font-size: 12px}
+
+/*=============================Task 1-5 ======================================*/
+#main{float: left;width: 100%;overflow: hidden;}
+.main{margin-right: 444px}
+aside{float: left; width: 362px; margin:80px 0 0 -424px;}
+figure{float: left;}
+figure img{height: 120px; margin: 0 15px}
+
+.group:before,
+.group:after{content:""; display: table;}
+.group:after{clear:both;}
+.group{*zoom:1;}
