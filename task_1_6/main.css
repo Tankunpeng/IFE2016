@@ -3,7 +3,7 @@ body,p,ul{margin: 0}
 .group:after{clear: both}
 .group{*zoom:1;}
 
-html{width:892px;padding:0 44px; height: 1386px;font-family: "微软雅黑";}
+body{width:892px;padding:0 44px; height: 1386px;font-family: "微软雅黑";}
 header{width:892px; border-bottom:2px solid #938e8e;font-family: "黑体"; }
 header .url{float: left; padding-top: 60px;background-color: #d45d5c;color: #fff;width: 110px;font-size: 12px}
 header #date{float: right; padding-top: 60px;font-size: 12px;color: #d45d5c;}
@@ -28,7 +28,8 @@ header #date{float: right; padding-top: 60px;font-size: 12px;color: #d45d5c;}
 .sec1 .col2 div{color: #d2994f;}
 .sec1 .col3{float: left;width: 132px;}
 .sec1 .col3 div{color: #cc7680;}
-
+.sec1 .col3 p+p{margin-top: 60px}
+.sec1 .col3 p+p span{color: #cd4a48}
 
 .sec2{clear: both;margin: 40px 0 20px;}
 .sec2 .col1{float: left;width: 415px; margin-right: 18px}
@@ -47,17 +48,23 @@ text-transform: uppercase;padding-bottom: 7px}
 .sec2 .col2 .title .wrap span{font:oblique 12px "微软雅黑"; color: #72b16a;word-spacing: 140%}
 .sec2 .col2>.wrap{background-color: #eeedd6;width: 459px;height: 318px;margin-top: 12px}
 .sec2 .col2 .menu{padding : 20px 0 18px}
-.sec2 .col2 .menu li{line-height: 40px;font-size: 16px;}
+.sec2 .col2 .menu li{line-height: 40px;font-size: 16px;list-style: none;font-family: "宋体";}
+.sec2 .col2 .menu .rect{border: 5px solid rgba(0,0,0,0);border-bottom: 8.66px solid #0f456b;
+position:relative;top:-11px;margin-right: 5px}
+.sec2 .col2 .menu .right{margin-right:20px ;float: right;position: relative;top:15px; font:oblique 12px "宋体";color: #5a5b5b}
+.sec2 .col2 .menu ul{padding-left: 30px}
+
 .sec2 .col2 .bottom .left{background-color: #d45d5c;float: left;width: 237px;height: 86px;color: #fff;margin-right: 20px;
 padding: 37px  8px 37px 15px;font:12px "黑体";}
 .sec2 .col2 .bottom .left .first{display: inline-block; float: left;font-size: 110px;border-right: 2px solid #fff;
 line-height: 86px;height: 86px;margin-right: 8px;}
 .sec2 .col2 .bottom .left .cap{text-transform: uppercase;font:oblique 21px "黑体";line-height: 24px}
 .sec2 .col2 .bottom .right{font:14px "黑体";color: #5a5b5b ;}
+
 .sec2 .col2 .bottom .right .quotel,
-.sec2 .col2 .bottom .right .quoter{font:72px "黑体";color: #d45d5c;}
+.sec2 .col2 .bottom .right .quoter{font:72px "黑体";color: #d45d5c; vertical-align: bottom; position: relative;}
 .sec2 .col2 .bottom .right .quotel{display: inline-block; text-align: bottom;   line-height: 16px ;position: relative;
-	left:-40px;top:30px ;width: 35px}
-.sec2 .col2 .bottom .right .quoter{float: right}
+	left:-40px;top:30px ;width: 35px;height: 30px}
+.sec2 .col2 .bottom .right .quoter{float: right;left: 20px;}
 footer{ width:892px;border-top:1px solid #938e8e;font-size: 12px;color: #d45d5c;font-family: "黑体";}
 footer .url{float:right;}
