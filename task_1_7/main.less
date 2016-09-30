@@ -1,0 +1,76 @@
+@width:1280px;
+@header-height: 58px;
+@header-border: 5px;
+@flag-height:690px;
+@flag-pos: 118px 234px;
+@flag-button: 330px 64px;
+@flag-sub-height: 162px;
+@about-height:142px;
+@map-height:340px;
+@city-height:604px;
+@desc-height1:566px;
+@desc-height2:521px;
+@join-height:768px;
+@connect-height:361px;
+@footer-height: 58px;
+body{
+	weight: @width;
+	font-family: "microsoft yahei";
+	text-align: center;
+}
+header {
+	height: @header-height;
+
+}
+footer {
+	height: @footer-height;
+}
+nav li,
+ul,
+nav{
+	display: inline-block;
+}
+.flag{
+	height: @flag-height;
+	background: url(flag.png) no-repeat;
+}
+.detail{
+	height: @flag-sub-height;
+}
+.more{
+	line-height: @about-height;
+	background-color: #ededed;
+}
+.map{
+	background:url(map.png) no-repeat;
+	height: @map-height;
+}
+.show{
+	height: @city-height;
+}
+.show div{
+	display: inline-block;
+}
+.city-bj{
+	background: url(city.png) no-repeat;
+	height: 312px;
+	width: 219px;
+	border-bottom: 1px solid #dadada;
+}
+.face{
+	background: url(face.png) no-repeat;
+	height: 567px;
+	width: 850px;
+}
+#we1{
+	float: right;
+	height: 567px;
+	width: 430px;
+}
+#we2,
+#we3{
+	float: left;
+	height: 567px;
+	width: 425px;
+}
+
