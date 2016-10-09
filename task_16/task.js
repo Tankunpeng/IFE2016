@@ -27,15 +27,32 @@ function addAqiData() {
  */
 function vertify(city,cqi){
 	var pattern_num = /0|^[1-9]\d*$/;
-	var pattern_str = /^\S+$/;
+	var pattern_str = /^[a-zA-Z\u4e00-\u9fa5]+$|^[a-zA-Z]+ ?[a-zA-Z]+$/;
 	if(pattern_str.test(city)){
+		if($("aqi-city-input").nextElementSibling){$("aqi-city-input").parentNode.removeChild(
+				$("aqi-city-input").nextElementSibling)}
 		if(pattern_num.test(cqi)){
+			if($("aqi-value-input").nextElementSibling){$("aqi-value-input").parentNode.removeChild(
+				$("aqi-value-input").nextElementSibling)}
 			return true;
 		}
-		else{console.log("空气质量指数必须为整数")}
+		else{
+			console.log("空气质量指数必须为整数");
+			if(!$("aqi-value-input").nextElementSibling){
+			var span = document.createElement("span");
+			span.innerText = "空气质量指数必须为整数"
+			span.style="{color:red}"
+			$("aqi-value-input").parentNode.appendChild(span);}
+			}
 	}
 	else{
-		console.log("城市名必须为中英文字符")
+		console.log("城市名必须为中英文字符");
+		if(!$("aqi-city-input").nextElementSibling){
+		var span = document.createElement("span");
+		span.innerText = "城市名必须为中英文字符"
+		span.style="{color:red}"
+		$("aqi-city-input").parentNode.appendChild(span);}
+			
 	}
 	return null;	
 }
