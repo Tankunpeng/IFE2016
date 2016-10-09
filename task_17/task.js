@@ -62,8 +62,8 @@ function renderChart() {
   var content="";
   for(item in chartData){
   	var bgc = "black";
-  	if(chartData[item]<400) var bgc = "yellow";
-  	if(chartData[item]<300) var bgc = "red";
+  	if(chartData[item]<400) var bgc = "red";
+  	if(chartData[item]<300) var bgc = "yellow";
   	if(chartData[item]<200) var bgc = "blue";
   	if(chartData[item]<100) var bgc = "green";
   	var div = document.createElement("div")
@@ -157,14 +157,14 @@ function initAqiChartData() {
   	  if(day.getDay()==0){
   	  	nums++;
   	  	value+=chartData[daystr];
-  	  	newData["week"+i] = value/nums;
+  	  	newData["week"+i] = Math.ceil(value/nums);
   	  	i++; value=0; nums = 0;
   	  }
   	  nums++;
   	  value+=chartData[daystr];
   	}
   	if(value){
-  		newData["week"+i] = value/nums;
+  		newData["week"+i] = Math.ceil(value/nums);
   	}
   	chartData = newData;
   }
@@ -176,14 +176,14 @@ function initAqiChartData() {
   	for(daystr in chartData){
   	  day = new Date(daystr)
   	  if(day.getMonth()+1!=i){
-  	  	newData["month"+i] = value/nums;
+  	  	newData["month"+i] = Math.ceil(value/nums);
   	  	i++; value=chartData[daystr]; nums = 1;
   	  }
   	  nums++;
   	  value+=chartData[daystr];
   	}
   	if(value){
-  		newData["month"+i] = value/nums;
+  		newData["month"+i] = Math.ceil(value/nums);
   	}
   	chartData = newData;
   }
