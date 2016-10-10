@@ -52,7 +52,7 @@ function pushTail(){
  * pop头部元素
  */
 function popHead(){
-  var head = $("wrap").firstChild;
+  var head = $("wrap").firstElementChild;
   alert(head.innerText)
   $("wrap").removeChild(head)
 }
@@ -61,7 +61,7 @@ function popHead(){
  * pop尾部元素
  */
 function popTail(){
-  var tail = $("wrap").lastChild;
+  var tail = $("wrap").lastElementChild;
   alert(tail.innerText)
   $("wrap").removeChild(tail)
 }
@@ -87,6 +87,7 @@ function init(){
   $("rin").onclick=pushTail
   $("lout").onclick=popHead
   $("rout").onclick=popTail
+  //$("wrap").removeChild($("wrap").firstChild)
 }
 
 onload = init;
