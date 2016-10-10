@@ -170,25 +170,35 @@ function buble(){
 	times = bubleState.times,
 	curr=bubleState.curr
 	console.log(curr+"-"+times+"-"+len)
-	list[curr].style.backgroundColor = "#00f"
-	if(len - times > 0){
-		console.log(list[curr].innerText+"-"+list[curr+1].innerText)
+	
+	// 如果未排序元素数量大于1个
+	if(len - times > 1){
+		list[curr].style.backgroundColor = "#00f"
 		if(list[curr].innerText > list[curr+1].innerText){
 			// 当前节点大于下一节点，互换位置
 			$("wrap").insertBefore(list[curr+1],list[curr])
-
 		}
-		bubleState.curr=(curr+1)%(len-times);
-		list[curr].style.backgroundColor = "#f00"
-		list[bubleState.curr].style.backgroundColor = "#00f"
-		
-		if(curr == 0 && times<len){
-
+		// buble传递到下一位置
+		curr++;
+		list[curr].style.backgroundColor = "#00f"
+		list[curr-1].style.backgroundColor = "#f00"
+		if(curr+1==len-times){
+			//curr 指向尾元素,当次排序完成
+			//下次冒泡从头元素开始, times+1
+			bubleState.curr = 0;
 			bubleState.times+=1;
+			// 标记完成排序的元素颜色为green
+			list[curr].style.backgroundColor = "#0f0"
 		}
-		if(bubleState.curr == 0 && times){
-			list[len-times-1].style.backgroundColor = "#0f0";
+		else{
+			//下次冒泡从下一位置开始
+			bubleState.curr = curr;
 		}
+	}
+	else if(len - times){
+		bubleState.times+=1;
+		// 标记最后一个元素颜色为green
+		list[curr].style.backgroundColor = "#0f0"
 	}
 }
 
@@ -201,6 +211,7 @@ function show(){}
  *
  */
 function synsort(){
+
 	h = setInterval(buble,50);
 	clear(h);
 }
@@ -208,6 +219,8 @@ function synsort(){
 function clear(idle){
 	if(bubleState.times == bubleState.list.length){
 		clearInterval(idle);
+		bubleState.times = 0;
+		bubleState.curr = 0;
 		alert("排序完成")
 	}
 	else{
