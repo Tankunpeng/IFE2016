@@ -13,17 +13,9 @@
 * 判断队列是否超限
 * 改变队列样式
 * 冒泡排序算法
+* 将冒泡排序改为分步执行，用于展示排序效果
 
-# BUG
-* 左侧入后第一次右侧出提示undefined
-
-# 内容
-* 5个input，1个文本框，4个按钮
-* 分析逻辑，建立函数框架
-* 为按钮绑定处理函数
-* 事件处理程序中this指代事件目标
-* document.createElement("div")
-* element.firstChild/ .lastChild
-* element.removeChild(child)
-* element.appendChild(child)/ .insertBefore
+# 技术要点
+* 排序算法
+* 算法执行效果展示
 
