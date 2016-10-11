@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task_21</title>
+    <script src="task.js"></script>
+    <style type="text/css">
+      #bin-tree *{
+        float:left;
+        border:1px solid #000;
+        margin: 20px 10px;
+        *zoom: 1;
+        background-color: #fff;
+      }
+      #bin-tree: *before,
+      #bin-tree: *after{
+        content: ="";
+        display: = table;
+      }
+      #bin-tree: *after{
+        clear: both;
+      }
+      #bin-tree>div>div>div>div{
+        width: 50px;
+        height: 30px;
+      }
+      #opera{
+        clear:both;
+      }
+
+      #bin-tree .selected{
+        background-color: #f00;
+      }
+      #bin-tree .traved{
+        border-color: #f00;
+      }
+    </style>
+  </head>
+<body class="clear-fix">
+  
+  <div id="bin-tree">
+    <div id="bin-root">
+      <div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id = "opera">
+    <select id="trav-method">
+      <option value="Pre_R">先序遍历</option>
+      <option value="In_R">中序遍历</option>
+      <option value="Post_R">后序遍历</option>
+    </select>
+    <input type="button" id="traverse" value="开始遍历">
+    遍历速度：<input type="range" id="speed" value="5" max="20" min="1" />
+  </div>
+</body>
+</html>
+
