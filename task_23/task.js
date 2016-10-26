@@ -21,53 +21,105 @@ function traverse(){
 
 
 /**
- * travIn_R 中序遍历 递归版
- */
-function travIn_Rd(binroot,visit){
-  if (!binroot) return;
-  travIn_R(binroot.firstElementChild,visit);
-  visit(binroot);
-  travIn_R(binroot.lastElementChild,visit);
-}
-/**
- * travPre_R 先序遍历 迭代版
- */
-function travPre_Rd(binroot,visit){
-  var stack = [];
-  while(true){
-    (function visitAlongLeftBranch(x) {
-      while(x){
-        visit(x);
-        stack.push(x.lastElementChild);
-        x = x.firstElementChild;
-      }
-    })(binroot);
-    if (stack.empty()) break;
-    binroot = stack.pop();
-  }
-}
-
-/**
- * travPre_R 先序遍历 迭代展开版
+ * travbroad 广度优先遍历 迭代展开版
  */
 var g_binroot,g_stack,g_traved,isover;
-function travPre_R(binroot,visit){
+function travbroad(binroot,visit){
+  console.log("broad")
   g_binroot = binroot;
   g_stack = [];
   g_traved = [];
   isover = false;
   var delay = 1000/$("speed").value  
-  var interval = setInterval(travPre_Rstep,delay,visit)
+  var interval = setInterval(travbroad_step,delay,visit)
   setTimeout(function clear(interval){
     if(isover){
       clearInterval(interval);
+      alert("遍历结束")
+      while(g_traved.length){
+        var node = g_traved.pop()
+        node.className=""
+      }
+    }
+    else{
+      setTimeout(clear,delay,interval)
+    }
+  },delay,interval)
+
+}
+function travbroad_step(visit){
+  if (g_traved.length){
+    g_traved[0].className = "traved"
+  }
+  console.log(g_binroot.firstChild.textContent.trim())
+  visit(g_binroot)
+  g_traved.unshift(g_binroot)
+  if(g_binroot.firstElementChild){ //有儿子可以留下
+    g_stack.push(g_binroot)
+  }
+  if(g_binroot.nextElementSibling) { //先去找兄弟
+    g_binroot = g_binroot.nextElementSibling
+  }
+  else if(g_stack.length){  //不行再找儿子
+    g_binroot = g_stack.shift().firstElementChild;
+  } //都没了，就回家
+  else{
+    if(!isover){
+      isover = true;
+    }
+
+    
+  }
+}
+
+/**
+ * travdepth 深度优先遍历 迭代展开版
+ */
+function travdepth(binroot,visit){
+  console.log("depth")
+  g_binroot = binroot;
+  g_stack = [];
+  g_traved = [];
+  isover = false;
+  var delay = 1000/$("speed").value  
+  var interval = setInterval(travdepth_step,delay,visit)
+  setTimeout(function clear(interval){
+    if(isover){
+      clearInterval(interval);
+      alert("遍历结束")
+      while(g_traved.length){
+        var node = g_traved.pop()
+        node.className=""
+      }
     }
     else{
       setTimeout(clear,delay,interval)
     }
   },delay,interval)
 }
-
+function travdepth_step(visit){
+  if (g_traved.length){
+    g_traved[0].className = "traved"
+  }
+  console.log(g_binroot.firstChild.textContent.trim())
+  visit(g_binroot)
+  g_traved.unshift(g_binroot)
+  if(g_binroot.nextElementSibling){ //有兄弟可以留下
+    g_stack.push(g_binroot)
+  }
+  if(g_binroot.firstElementChild) { //先去找儿子
+    g_binroot = g_binroot.firstElementChild
+  }
+  else if(g_stack.length){  //不行再找兄弟
+    g_binroot = g_stack.pop().nextElementSibling;
+  } //都没了，就回家
+  else{
+    if(!isover){
+      isover = true;
+    }
+  }
+  
+}
 
 
 /**
