@@ -1,0 +1,97 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task_25</title>
+    <script src="task.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+<body class="clear-fix">
+  
+  <div id="bin-tree">
+    <div id="bin-root">
+      super
+      <div class="depth-2">
+        new
+        <div class="depth-3">
+          apple
+          <div class="depth-4">
+            pear
+          </div>
+          <div class="depth-4">
+            pig
+          </div>
+          <div class="depth-4">
+            cola
+          </div>
+          <div class="depth-4">
+            soccer
+          </div>
+        </div>
+        <div class="depth-3">phone</div>
+        <div class="depth-3">
+          new
+          <div class="depth-4">
+            book
+          </div>
+          <div class="depth-4">
+            school
+          </div>
+        </div>
+      </div>
+      <div class="depth-2">
+        note
+        <div class="depth-3">human
+          <div class="depth-4">code</div>
+          <div class="depth-4">operate</div>
+          <div class="depth-4">man</div>
+        </div>
+        <div class="depth-3">progrom
+          <div class="depth-4">boment
+            <div class="depth-5">cat</div>
+          </div>
+          <div class="depth-4">glass</div>
+        </div>
+      </div>
+      <div class="depth-2">fish</div>
+    </div>
+  </div>
+
+  <div id = "opera">
+    <select id="trav-method">
+      <option value="broad">广度优先</option>
+      <option value="depth">深度优先</option>
+    </select>
+    <input type="button" id="traverse" value="开始遍历">
+    遍历速度：<input type="range" id="speed" value="5" max="20" min="1" />
+  </div>
+  
+  <div>
+    <label for="add">
+      <input type="text" id="addtxt" placeholder="添加div标签">
+      <button id="addbt" >添加到选中结点</button>
+    </label>
+    <label for="del">
+      <button id="delbt" >删除选中结点</button>
+    </label>
+  </div>
+
+  <div>
+    <label for="find">
+      <input type="text" id="findtxt" placeholder="查找">
+      <button id="findbt" >查找</button>
+    </label>
+  </div>
+
+  <div>
+    <label for="find">
+      <button id="showallbt" >全部展开</button>
+    </label>
+  </div>
+
+
+
+</body>
+</html>
+

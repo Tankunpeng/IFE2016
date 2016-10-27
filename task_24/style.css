@@ -1,0 +1,23 @@
+#bin-tree  *{
+        display: flex;
+        
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+        border: 1px solid #555;
+        font: 14px Arial;
+
+        flex: 1 1 auto;
+        padding:10 0;
+        margin:2;
+      }
+
+      #bin-tree .selected{
+        background-color: #f00;
+      }
+      #bin-tree .traved{
+        border-color: #f00;
+      }
+
+      

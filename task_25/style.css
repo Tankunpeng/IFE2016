@@ -1,0 +1,82 @@
+#bin-tree {
+  width: 300px;
+  height: 500px;
+  overflow: scroll;
+
+}
+
+#bin-tree  div{
+        //display: flex;
+        
+        // flex-direction: row;
+        // flex-wrap: nowrap;
+        // justify-content: space-around;
+        
+        border: 1px solid #555;
+        font: 14px Arial;
+        margin-left: 10px;
+        padding-left: 5px;
+        line-height: 14px;
+
+      }
+
+#bin-tree  div:hover{
+  cursor: default;
+}
+
+
+#bin-tree .selected{
+    font-weight: bolder;
+        //background-color: #0f0;
+      }
+#bin-tree .traved{
+        //border-color: #f00;
+      }
+
+
+#bin-tree .container {
+  color: red;
+  //border-color: blue;
+}
+#bin-tree .items {
+  color:#000;
+  border-color: #f00;
+}
+
+
+
+#bin-tree .collapsicon{
+  border: 5px solid rgba(0,0,0,0);
+  border-left: 8.66px solid #0f456b;
+  border-right-width: 0;
+  position: relative;
+  top: 3px;
+  float: left;
+  margin-right: 3px;
+}
+
+#bin-tree .showicon{
+  border: 5px solid rgba(0,0,0,0);
+  border-top: 8.66px solid #0f456b;
+  position: relative;
+  top:12px;
+  margin-right: 3px;
+}
+
+#bin-tree .showicon:hover,
+#bin-tree .collapsicon:hover{
+  cursor: pointer;  
+}
+
+#bin-tree .collapsed{
+  height: 14px;
+}
+#bin-tree .collapsed>div{
+  visibility: collapse;
+}
+
+
+
+
+
+      
